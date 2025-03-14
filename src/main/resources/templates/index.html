@@ -40,7 +40,27 @@
     </nav>
 
     <!-- Контент страницы -->
-    <div th:text="${user}"></div>
+    <h2 class="mt-4">Список инцидентов</h2>
+    <!-- Таблица с инцидентами -->
+    <table class="table table-bordered table-striped">
+        <thead>
+        <tr>
+            <th>ID</th>
+            <th>Название</th>
+            <th>Описание</th>
+            <th>Адрес</th>
+        </tr>
+        </thead>
+        <tbody>
+        <!-- Используем Thymeleaf для перебора списка инцидентов -->
+        <tr th:each="accident : ${accidents}">
+            <td th:text="${accident.id}"></td>
+            <td th:text="${accident.name}"></td>
+            <td th:text="${accident.text}"></td>
+            <td th:text="${accident.address}"></td>
+        </tr>
+        </tbody>
+    </table>
 </div>
 </body>
 </html>
