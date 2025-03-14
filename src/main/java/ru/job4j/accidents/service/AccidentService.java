@@ -17,7 +17,7 @@ public class AccidentService {
         this.accidentMem = accidentMem;
     }
 
-    public void addAccident(Accident accident) {
+    public void create(Accident accident) {
         accidentMem.add(accident);
     }
 
@@ -29,11 +29,11 @@ public class AccidentService {
         return accidentMem.findById(id);
     }
 
-    public void updateAccident(Accident accident) {
+    public void update(Accident accident) {
         accidentMem.update(accident);
     }
 
-    public void deleteAccident(int id) {
+    public void delete(int id) {
         accidentMem.delete(id);
     }
 }
